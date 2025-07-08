@@ -20,7 +20,16 @@
   };
 
   const setupEvents = (): void => {
-    
+    const calculateBtn = getEl("calculate") as HTMLButtonElement | null;
+    const toggleThemeBtn = getEl("toggle-theme") as HTMLButtonElement | null;
+
+    if (calculateBtn) {
+      calculateBtn.addEventListener("click", calculateBill);
+    }
+
+    if (toggleThemeBtn) {
+      toggleThemeBtn.addEventListener("click", toggleTheme);
+    }
   };
 
   const init = (): void => {
